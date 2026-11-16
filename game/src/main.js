@@ -462,7 +462,9 @@ for (let i = 0; i < 5; i++) {
     range(G.rng, 60, CFG.view.w - 60), range(G.rng, 90, CFG.view.h - 60));
   G.asteroids.push(rock);
 }
-const params = shotParams();
+// Debug/test hook: the playtest driver reads the live state through it.
+window.__game = G;
+window.__shotReady = false;
 if (params.shot) {
   applyShot(G, params.shot, params.seed);
   // Settle the staged frame with fixed steps, then hold it frozen.
