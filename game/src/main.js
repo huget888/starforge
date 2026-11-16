@@ -465,6 +465,8 @@ for (let i = 0; i < 5; i++) {
 // Debug/test hook: the playtest driver reads the live state through it.
 window.__game = G;
 window.__shotReady = false;
+
+const params = shotParams();
 if (params.shot) {
   applyShot(G, params.shot, params.seed);
   // Settle the staged frame with fixed steps, then hold it frozen.

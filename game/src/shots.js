@@ -85,6 +85,7 @@ export function applyShot(g, name, seed) {
     g.best = 2480;
     g.bestCombo = 4;
     g.ship.alive = false;
+    g.ship.hull = 0;
     g.particles.burst(CFG.view.w / 2, CFG.view.h / 2, '#fca5a5', 40, 320, 1.0, 3.5);
     g.particles.burst(CFG.view.w / 2, CFG.view.h / 2, '#fbbf24', 20, 220, 0.8, 3);
     g.particles.ring(CFG.view.w / 2, CFG.view.h / 2, '#f87171', 130);
